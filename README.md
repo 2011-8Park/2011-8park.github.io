@@ -1,12 +1,14 @@
 # Suite 2011 · 8 Park Road
 
-A responsive, static condo sale website. All property details and photos are clearly marked as coming soon until real listing content is provided.
+A responsive, static condo sale website. Listing details remain marked as coming soon. The gallery includes three supplied photos and an interactive floor plan.
 
 ## Edit
 
 - `site/index.html`: page copy, listing facts, gallery, and contact section.
 - `site/styles.css`: colours, typography, and responsive layouts.
-- Replace the decorative hero illustration and gallery placeholders with actual property photos when available.
+- `site/tour.js`: photo titles, descriptions, and viewer navigation.
+- `site/assets/`: published photos and floor plan. Numbered `data-view` links in the HTML map to the corresponding photo in `tour.js`; marker positions use percentages of the original plan image.
+- The decorative hero illustration can be replaced with a property photo later.
 
 Open `site/index.html` in a browser to preview. No build tools or dependencies are required. Google Fonts are optional; local fallback fonts work offline.
 

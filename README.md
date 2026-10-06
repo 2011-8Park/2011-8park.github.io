@@ -1,6 +1,6 @@
 # Suite 2011 · 8 Park Road
 
-A responsive, static condo sale website. Listing details remain marked as coming soon. The gallery includes three supplied photos and an interactive floor plan.
+A responsive, static condo sale website. Listing details remain marked as coming soon. The gallery includes three unaltered owner photos and an interactive, AI-illustrated floor plan. The original plan remains linked. The neighbourhood map uses Leaflet, OpenStreetMap tiles, and an official TDSB attendance boundary.
 
 ## Edit
 
@@ -8,7 +8,10 @@ A responsive, static condo sale website. Listing details remain marked as coming
 - `site/styles.css`: colours, typography, and responsive layouts.
 - `site/tour.js`: photo titles, descriptions, and viewer navigation.
 - `site/assets/`: published photos and floor plan. Numbered `data-view` links in the HTML map to the corresponding photo in `tour.js`; marker positions use percentages of the original plan image.
-- The decorative hero illustration can be replaced with a property photo later.
+- The hero uses an actual property photo. No virtually staged property photographs are used.
+- `site/neighbourhood.js`: map pins and catchment controls. `site/assets/rosedale-catchment.js` contains the boundary copied from the TDSB map on October 6, 2026. School assignment is confirmed by the TDSB street guide (Park Rd: 8 Only). Distances are rounded straight-line calculations, not walking routes.
+- The 10/10 school score is explicitly historical (2022–23, Fraser 2024 report); do not relabel it as a current rating.
+- `Resources/floorplan_generation_prompt.md`: generation prompt and input roles. The style-reference image is a different unit and is not published.
 
 Open `site/index.html` in a browser to preview. No build tools or dependencies are required. Google Fonts are optional; local fallback fonts work offline.
 

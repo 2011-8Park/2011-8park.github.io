@@ -22,4 +22,4 @@ In the repository's **Settings → Pages → Build and deployment**, choose **Gi
 Expected URL once enabled and deployed:
 https://FriendlyNeighborhoodJ.github.io/2011_8ParkRd/
 
-Only `site/` is included in the published artifact. Local SSH key files are ignored by Git and must never be committed.
+The workflow packages only the root entry page, `.nojekyll`, and `site/`. This preserves identical URLs whether Pages publishes from the branch or the workflow. Local SSH key files are ignored by Git and must never be committed.

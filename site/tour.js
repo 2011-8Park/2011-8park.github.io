@@ -10,7 +10,11 @@
     { src: 'assets/bathroom-ensuite.jpg', title: 'The ensuite bathroom', alt: 'Ensuite bathroom with a vanity and bathtub with shower.' },
     { src: 'assets/bathroom-shower.jpg', title: 'The second bathroom', alt: 'Second bathroom with a vanity and glass shower enclosure.' },
     { src: 'assets/living-daylight.jpg', title: 'Living room in daylight', alt: 'Sunlit living room with a sofa and desk beside the windows.' },
-    { src: 'assets/kitchen-daylight.jpg', title: 'Kitchen in daylight', alt: 'Daylight view of the open kitchen, white cabinets, and peninsula.' }
+    { src: 'assets/kitchen-daylight.jpg', title: 'Kitchen in daylight', alt: 'Daylight view of the open kitchen, white cabinets, and peninsula.' },
+    { src: 'assets/living-sunlight-angle.jpg', title: 'Another sunny corner', alt: 'Living room with sunlight across the floor and a view toward the bedroom doorway.' },
+    { src: 'assets/entryway.jpg', title: 'A welcome home', alt: 'Entryway with a round mirror and shoe storage.' },
+    { src: 'assets/rooftop-lounge.jpg', title: 'Rooftop lounge', alt: 'Rooftop terrace with lounge chairs, planting, and barbecues.' },
+    { src: 'assets/rooftop-garden.jpg', title: 'Rooftop garden', alt: 'Landscaped rooftop walkway with flowers and trees.' }
   ];
   const scene = document.querySelector('.living-scenes');
   scene?.querySelectorAll('[data-scene]').forEach(link => {

@@ -62,3 +62,9 @@
 #neighbourhood-map{border-radius:16px;border:1px solid #d2c1ae;box-shadow:0 16px 45px #85634c12;overflow:hidden;background:#eee5d9;height:480px}.leaflet-tile-pane{filter:saturate(.3) sepia(.18) brightness(1.03)}.neighbourhood-pin span{background:#85634c!important;color:#fff8ef!important;border:2px solid #fff8ef;border-radius:50%;box-shadow:0 3px 12px #624a3533}.home-pin span{background:#594333!important}.school-pin span{background:#7b8161!important}.map-toolbar{gap:8px}.map-toolbar button{border-radius:25px}.leaflet-popup-content-wrapper{background:#fffaf2;color:#594333;border-radius:12px}.map-note{font-size:10px;line-height:1.7}.neighbourhood-grid{gap:35px}@media(max-width:600px){.header-note{font-size:9px;max-width:110px;text-align:right}#neighbourhood-map{height:380px}}
 
 #photo-browse-hint{font-size:12px;color:var(--muted);margin:0 15px;flex:1}.dialog-top{flex-wrap:wrap;gap:10px}@media(max-width:600px){#photo-browse-hint{order:3;flex-basis:100%;margin:0}}
+/* Stable viewer frame keeps Previous/Next in the same position. */
+.photo-dialog{height:90dvh;max-height:90dvh;overflow:hidden}
+.photo-dialog[open]{display:grid;grid-template-rows:88px minmax(0,1fr) 48px;gap:14px}
+.dialog-top{margin:0;align-content:center;min-width:0}.dialog-bottom{margin:0;height:48px}
+#tour-photo{width:100%;height:100%;max-height:none;min-height:0;object-fit:contain}
+@media(max-width:600px){.photo-dialog[open]{grid-template-rows:100px minmax(0,1fr) 44px;gap:10px}.dialog-bottom{height:44px}.dialog-top h2{max-width:calc(100% - 90px)}#photo-browse-hint{font-size:11px;line-height:1.5}}

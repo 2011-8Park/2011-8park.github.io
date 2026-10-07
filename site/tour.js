@@ -37,6 +37,8 @@
     });
   });
   let current = 0;
+  let pool = views.map((_, index) => index);
+  const livingViews = [6, 8, 2, 7, 0, 1];
   let opener;
   const show = (index) => {
     current = (index + views.length) % views.length;
@@ -45,25 +47,28 @@
     photo.src = new URL(view.src.replace('assets/', ''), assetBase).href;
     photo.alt = view.alt;
     document.querySelector('#photo-title').textContent = view.title;
-    document.querySelector('#photo-count').textContent = `${current + 1} / ${views.length}`;
+    document.querySelector('#photo-count').textContent = `${pool.indexOf(current) + 1} / ${pool.length}`;
   };
   document.querySelectorAll('[data-view]').forEach(link => {
     link.addEventListener('click', event => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       opener = link;
+      pool = link.dataset.tour === 'living' ? livingViews : views.map((_, index) => index);
+      document.querySelector('#photo-browse-hint').textContent = link.dataset.tour === 'living' ? 'Living room & kitchen · Use ← / → to explore all 6 photos' : '';
       show(Number(event.currentTarget.dataset.view));
       dialog.showModal();
       document.body.classList.add('photo-open');
     });
   });
+  const step = (direction) => show(pool[(pool.indexOf(current) + direction + pool.length) % pool.length]);
   document.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-  document.querySelector('.photo-prev').addEventListener('click', () => show(current - 1));
-  document.querySelector('.photo-next').addEventListener('click', () => show(current + 1));
+  document.querySelector('.photo-prev').addEventListener('click', () => step(-1));
+  document.querySelector('.photo-next').addEventListener('click', () => step(1));
   dialog.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
-      show(current + (event.key === 'ArrowRight' ? 1 : -1));
+      step(event.key === 'ArrowRight' ? 1 : -1);
     }
   });
   dialog.addEventListener('click', event => {

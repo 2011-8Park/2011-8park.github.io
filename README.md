@@ -29,3 +29,5 @@ The workflow generates a direct homepage from `site/index.html` and packages onl
 ## Photography slots
 
 Replace the two remaining clearly labelled SVG placeholders in `site/assets/placeholders/` with actual photos: second bedroom, and south-facing view. Update each image source and caption in `site/index.html`, then regenerate the root homepage. The room sections explain the intended buyer benefit without fabricating property photography. Price, maintenance fee, tax, possession, and viewing contact remain placeholders until supplied.
+
+New uploads that replace the same photograph take precedence. Move superseded source images into `Resources/archive/` and replace their published assets; archive contents are excluded from the Pages build. Different angles and daytime/evening photographs remain distinct views.

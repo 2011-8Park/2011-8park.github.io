@@ -25,3 +25,7 @@ Expected URL once enabled and deployed:
 Repository: [2011-8Park/2011-8park.github.io](https://github.com/2011-8Park/2011-8park.github.io).
 
 The workflow generates a direct homepage from `site/index.html` and packages only that page, `.nojekyll`, and `site/`. The main URL stays at `https://2011-8park.github.io/`, without a redirect. Existing `site/` links also work. After editing `site/index.html`, run `python3 scripts/prepare_pages.py --sync-root` to refresh the tracked root homepage for branch-based publishing. Local SSH key files are ignored by Git and must never be committed.
+
+## Photography slots
+
+Replace the five clearly labelled SVG placeholders in `site/assets/placeholders/` with actual photos: primary bedroom, second bedroom, both bathrooms, south-facing view, and rooftop terrace. Update each image source and caption in `site/index.html`, then regenerate the root homepage. The room sections explain the intended buyer benefit without fabricating property photography. Price, maintenance fee, tax, possession, and viewing contact remain placeholders until supplied.

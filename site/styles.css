@@ -23,3 +23,5 @@
 @media(min-width:601px) and (max-width:800px){.orbit-photo{width:300px}.orbit-feature{width:145px}.feature-0,.feature-3{left:calc(50% - 72.5px)}.orbit-feature b{font-size:13px}.orbit-feature small{font-size:10px}.orbit-layout{min-height:650px}}
 
 .bathroom-photos a{position:relative;display:block}
+
+@media(min-width:901px){.floorplan-tour{align-items:start}.plan-frame{position:sticky;top:24px}}@media(max-width:600px){.view-marker{width:30px;height:30px;font-size:11px}.view-list{grid-template-columns:1fr}}

@@ -20,6 +20,8 @@ Open `site/index.html` in a browser to preview. No build tools or dependencies a
 In the repository's **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source. The included `Publish condo website` workflow deploys the `site/` folder on pushes to `main`, or through **Actions → Publish condo website → Run workflow**.
 
 Expected URL once enabled and deployed:
-https://FriendlyNeighborhoodJ.github.io/2011_8ParkRd/
+[View the condo website](https://yourfirsthome.github.io/2011_8ParkRd/)
+
+Repository: [YourFirstHome/2011_8ParkRd](https://github.com/YourFirstHome/2011_8ParkRd).
 
 The workflow packages only the root entry page, `.nojekyll`, and `site/`. This preserves identical URLs whether Pages publishes from the branch or the workflow. Local SSH key files are ignored by Git and must never be committed.

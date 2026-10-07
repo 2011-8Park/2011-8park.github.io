@@ -14,7 +14,8 @@
     { src: 'assets/living-sunlight-angle.jpg', title: 'Another sunny corner', alt: 'Living room with sunlight across the floor and a view toward the bedroom doorway.' },
     { src: 'assets/entryway.jpg', title: 'A welcome home', alt: 'Entryway with a round mirror and shoe storage.' },
     { src: 'assets/rooftop-lounge.jpg', title: 'Rooftop lounge', alt: 'Rooftop terrace with lounge chairs, planting, and barbecues.' },
-    { src: 'assets/rooftop-garden.jpg', title: 'Rooftop garden', alt: 'Landscaped rooftop walkway with flowers and trees.' }
+    { src: 'assets/rooftop-garden.jpg', title: 'Rooftop garden', alt: 'Landscaped rooftop walkway with flowers and trees.' },
+    { src: 'assets/2011_8Park_floorplan.png', title: 'Original floor plan · Suite 2011', alt: 'Original floor plan with room dimensions for Suite 2011 at 8 Park Road.' }
   ];
   const scene = document.querySelector('.living-scenes');
   scene?.querySelectorAll('[data-scene]').forEach(link => {
@@ -58,7 +59,7 @@
       const selected = Number(link.dataset.view);
       pool = groups[link.dataset.tour] || (livingViews.includes(selected) ? livingViews : [10, 11].includes(selected) ? groups.rooftop : [selected]);
       const hint = document.querySelector('#photo-browse-hint');
-      hint.textContent = pool === livingViews ? 'Living room → Kitchen → Daylight angle · Use the arrows to browse' : pool.length > 1 ? 'Use the arrows to browse this space' : 'One photograph of this space';
+      hint.textContent = pool === livingViews ? 'Living room → Kitchen → Daylight angle · Use the arrows to browse' : pool.length > 1 ? 'Use the arrows to browse this space' : selected === 12 ? 'Original layout and room dimensions' : 'One photograph of this space';
       document.querySelectorAll('.photo-prev, .photo-next').forEach(button => { button.disabled = pool.length === 1; });
       show(Number(event.currentTarget.dataset.view));
       dialog.showModal();

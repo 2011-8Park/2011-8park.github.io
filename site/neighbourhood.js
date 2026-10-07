@@ -14,7 +14,7 @@
   const points = [
     { symbol: '8', name: 'Home · Suite 2011', point: home, note: '8 Park Road', className: 'home-pin' },
     { symbol: 'T', name: 'Bloor–Yonge subway', point: [43.6707855, -79.3856867], note: 'Lines 1 & 2 · ~110 m straight-line distance' },
-    { symbol: 'L', name: 'Longo’s', point: [43.6708968, -79.3845092], note: '100 Bloor Street East · ~70 m straight-line distance' },
+    { symbol: 'L', name: 'Longo’s', point: [43.6708968, -79.3845092], note: '100 Bloor Street East · ~23 m away' },
     { symbol: 'S', name: 'Rosedale Junior Public School', point: [43.67753, -79.38188], note: '22 South Drive · JK–Grade 6 · ~710 m straight-line distance', className: 'school-pin' }
   ];
   points.forEach(place => {

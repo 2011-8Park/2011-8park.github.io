@@ -5,7 +5,8 @@
   const views = [
     { src: 'assets/living-to-kitchen.jpg', title: 'Toward the kitchen', alt: 'Living room looking from the windows toward the kitchen and entry.' },
     { src: 'assets/living-to-windows.jpg', title: 'Toward the windows', alt: 'Living room looking from the kitchen side toward the windows at night.' },
-    { src: 'assets/kitchen-to-living.jpg', title: 'A daylight perspective', alt: 'Daylight view of the living area and windows beside the kitchen counter.' }
+    { src: 'assets/kitchen-to-living.jpg', title: 'A daylight perspective', alt: 'Daylight view of the living area and windows beside the kitchen counter.' },
+    { src: 'assets/primary-bedroom.png', title: 'The primary bedroom', alt: 'Primary bedroom with a bed, warm lighting, and a desk beside the bright windows.' }
   ];
   let current = 0;
   let opener;

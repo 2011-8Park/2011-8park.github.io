@@ -28,4 +28,4 @@ The workflow generates a direct homepage from `site/index.html` and packages onl
 
 ## Photography slots
 
-Replace the five clearly labelled SVG placeholders in `site/assets/placeholders/` with actual photos: primary bedroom, second bedroom, both bathrooms, south-facing view, and rooftop terrace. Update each image source and caption in `site/index.html`, then regenerate the root homepage. The room sections explain the intended buyer benefit without fabricating property photography. Price, maintenance fee, tax, possession, and viewing contact remain placeholders until supplied.
+Replace the four remaining clearly labelled SVG placeholders in `site/assets/placeholders/` with actual photos: second bedroom, both bathrooms, south-facing view, and rooftop terrace. Update each image source and caption in `site/index.html`, then regenerate the root homepage. The room sections explain the intended buyer benefit without fabricating property photography. Price, maintenance fee, tax, possession, and viewing contact remain placeholders until supplied.

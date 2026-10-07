@@ -22,10 +22,7 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Prepare matching website paths
-        run: |
-          mkdir -p _site/site
-          cp index.html .nojekyll _site/
-          cp -R site/. _site/site/
+        run: python3 scripts/prepare_pages.py --output _site
       - name: Upload website only
         uses: actions/upload-pages-artifact@v4
         with:

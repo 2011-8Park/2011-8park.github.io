@@ -20,8 +20,8 @@ Open `site/index.html` in a browser to preview. No build tools or dependencies a
 In the repository's **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source. The included `Publish condo website` workflow deploys the `site/` folder on pushes to `main`, or through **Actions → Publish condo website → Run workflow**.
 
 Expected URL once enabled and deployed:
-[View the condo website](https://yourfirsthome.github.io/2011_8ParkRd/)
+[View the condo website](https://2011-8park.github.io/)
 
-Repository: [YourFirstHome/2011_8ParkRd](https://github.com/YourFirstHome/2011_8ParkRd).
+Repository: [2011-8Park/2011-8park.github.io](https://github.com/2011-8Park/2011-8park.github.io).
 
-The workflow packages only the root entry page, `.nojekyll`, and `site/`. This preserves identical URLs whether Pages publishes from the branch or the workflow. Local SSH key files are ignored by Git and must never be committed.
+The workflow generates a direct homepage from `site/index.html` and packages only that page, `.nojekyll`, and `site/`. The main URL stays at `https://2011-8park.github.io/`, without a redirect. Existing `site/` links also work. After editing `site/index.html`, run `python3 scripts/prepare_pages.py --sync-root` to refresh the tracked root homepage for branch-based publishing. Local SSH key files are ignored by Git and must never be committed.

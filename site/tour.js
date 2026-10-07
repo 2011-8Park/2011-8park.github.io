@@ -1,6 +1,7 @@
 (() => {
   const dialog = document.querySelector('.photo-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
+  const assetBase = new URL('assets/', document.currentScript.src);
   const views = [
     { src: 'assets/living-to-kitchen.jpg', title: 'Toward the kitchen', alt: 'Living room looking from the windows toward the kitchen and entry.' },
     { src: 'assets/living-to-windows.jpg', title: 'Toward the windows', alt: 'Living room looking from the kitchen side toward the windows at night.' },
@@ -12,7 +13,7 @@
     current = (index + views.length) % views.length;
     const view = views[current];
     const photo = document.querySelector('#tour-photo');
-    photo.src = view.src;
+    photo.src = new URL(view.src.replace('assets/', ''), assetBase).href;
     photo.alt = view.alt;
     document.querySelector('#photo-title').textContent = view.title;
     document.querySelector('#photo-count').textContent = `${current + 1} / ${views.length}`;

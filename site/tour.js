@@ -40,7 +40,7 @@
   let current = 0;
   let pool = views.map((_, index) => index);
   const livingViews = [6, 7, 2];
-  const groups = { evening: [1, 0], living: livingViews, bedroom: [3], ensuite: [4], bathroom: [5], entry: [9], rooftop: [10, 11] };
+  const groups = { rooms: [6, 7, 1, 3, 4, 5], extras: [8, 9, 10, 11], evening: [1, 0], living: livingViews, bedroom: [3], ensuite: [4], bathroom: [5], entry: [9], rooftop: [10, 11] };
   let opener;
   const show = (index) => {
     current = (index + views.length) % views.length;
@@ -59,7 +59,7 @@
       const selected = Number(link.dataset.view);
       pool = groups[link.dataset.tour] || (livingViews.includes(selected) ? livingViews : [10, 11].includes(selected) ? groups.rooftop : [selected]);
       const hint = document.querySelector('#photo-browse-hint');
-      hint.textContent = pool === livingViews ? 'Living room → Kitchen → Daylight angle · Use the arrows to browse' : pool.length > 1 ? 'Use the arrows to browse this space' : selected === 12 ? 'Original layout and room dimensions' : 'One photograph of this space';
+      hint.textContent = pool === livingViews ? 'Living room → Kitchen → Daylight angle · Use the arrows to browse' : pool.length > 1 ? link.dataset.tour === 'extras' ? 'More photos · Use ← / → to browse' : link.dataset.tour === 'rooms' ? 'Room by room · Use ← / → to browse' : 'Use the arrows to browse this space' : selected === 12 ? 'Original layout and room dimensions' : 'One photograph of this space';
       document.querySelectorAll('.photo-prev, .photo-next').forEach(button => { button.disabled = pool.length === 1; });
       show(Number(event.currentTarget.dataset.view));
       dialog.showModal();
